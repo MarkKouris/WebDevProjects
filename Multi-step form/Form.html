@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="Form.css">
+    </head>
+
+    <body>
+        <div id="form-container">
+            <div id="steps-bar">
+                <div class="step-indicator active">1</div>
+                <div class="step-indicator">2</div>
+                <div class="step-indicator">3</div>
+            </div>
+            <form id="multiStepForm">
+                <div class="step active">
+                    <h3>Personal Information</h3>
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" required><br><br>
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" required><br><br>
+                </div>
+                <div class="step">
+                    <h3>Contact Info</h3>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required><br><br>
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required><br><br>
+                </div>
+                <div class="step">
+                    <h3>Account Details</h3>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required><br><br>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required><br><br>
+                </div>
+                <div class="buttons">
+                    <button type="button" id="prevBtn" onclick="lastStep()" disabled>Previous</button>
+                    <button type="button" id="nextBtn" onclick="nextStep()">Next</button>
+                    <button type="submit" id="submitBtn" style="display:none;">Submit</button>
+                </div>
+            </form>
+        </div>
+        <script src="Form.js"></script>
+    </body>
+</html>
